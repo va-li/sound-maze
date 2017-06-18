@@ -1,4 +1,4 @@
-package main.java.virtual.entities;
+package virtual.entities;
 
 import java.awt.Point;
 

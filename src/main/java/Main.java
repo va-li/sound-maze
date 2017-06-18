@@ -1,5 +1,3 @@
-package main.java;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +8,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/fxml/MainWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainWindow.fxml"));
         Parent root = loader.load();
         MainWindowController mainWindowController = loader.getController();
         primaryStage.setTitle("Sound Maze");
@@ -18,7 +16,6 @@ public class Main extends Application {
         mainWindowController.setStage(primaryStage);
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);

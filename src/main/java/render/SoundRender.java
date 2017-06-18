@@ -1,13 +1,14 @@
-package main.java.render;
+package render;
 
-import static main.java.virtual.maze.Element.*;
+import static virtual.maze.Element.*;
 
 import java.util.LinkedList;
 import java.util.List;
-import main.java.virtual.entities.Direction;
-import main.java.virtual.exceptions.UnableToMoveException;
-import main.java.virtual.maze.*;
-import main.java.virtual.entities.Player;
+import virtual.entities.Direction;
+import virtual.entities.Player;
+import virtual.exceptions.UnableToMoveException;
+import virtual.maze.Element;
+import virtual.maze.Maze;
 
 /**
  * Created by Valentin on 17.06.2017.

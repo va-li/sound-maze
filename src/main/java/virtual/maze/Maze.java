@@ -1,4 +1,4 @@
-package main.java.virtual.maze;
+package virtual.maze;
 
 
 import java.awt.*;

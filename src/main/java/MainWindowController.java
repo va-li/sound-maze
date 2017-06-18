@@ -1,6 +1,4 @@
-package main.java;
-
-import static main.java.virtual.entities.Direction.*;
+import static virtual.entities.Direction.*;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -17,12 +15,12 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javax.imageio.ImageIO;
-import main.java.virtual.entities.Direction;
-import main.java.virtual.exceptions.UnableToMoveException;
-import main.java.virtual.maze.Element;
-import main.java.virtual.maze.Maze;
-import main.java.virtual.entities.Player;
-import main.java.render.SoundRender;
+import virtual.entities.Direction;
+import virtual.exceptions.UnableToMoveException;
+import virtual.maze.Element;
+import virtual.maze.Maze;
+import virtual.entities.Player;
+import render.SoundRender;
 
 public class MainWindowController {
   @FXML
@@ -53,7 +51,7 @@ public class MainWindowController {
   @FXML
   public void initialize() {
     try {
-      mazeImage = ImageIO.read(getClass().getResource("../resources/mazes/" + mazeFileName));
+      mazeImage = ImageIO.read(getClass().getResource("/mazes/" + mazeFileName));
     } catch (IOException e) {
       System.err.println("Could not load '" + mazeFileName + "' - " + e.getMessage());
     }
@@ -62,12 +60,12 @@ public class MainWindowController {
     Player player = new Player(maze.getStartPoint());
 
     soundMaze = new SoundRender(maze, player);
-    emtpySpotSound = new Media(new File(getClass().getResource("../resources/sounds/" + emptySpotSoundFileName).getFile()).toURI().toString());
-    wallSound = new Media(new File(getClass().getResource("../resources/sounds/" + wallSoundFileName).getFile()).toURI().toString());
-    endSound = new Media(new File(getClass().getResource("../resources/sounds/" + endSoundFileName).getFile()).toURI().toString());
-    walkingSound = new Media(new File(getClass().getResource("../resources/sounds/" + walkingSoundFileName).getFile()).toURI().toString());
-    dangerSound = new Media(new File(getClass().getResource("../resources/sounds/" + dangerSoundFileName).getFile()).toURI().toString());
-    finishSound = new Media(new File(getClass().getResource("../resources/sounds/" + finishSoundFileName).getFile()).toURI().toString());
+    emtpySpotSound = new Media(new File(getClass().getResource("/sounds/" + emptySpotSoundFileName).getFile()).toURI().toString());
+    wallSound = new Media(new File(getClass().getResource("/sounds/" + wallSoundFileName).getFile()).toURI().toString());
+    endSound = new Media(new File(getClass().getResource("/sounds/" + endSoundFileName).getFile()).toURI().toString());
+    walkingSound = new Media(new File(getClass().getResource("/sounds/" + walkingSoundFileName).getFile()).toURI().toString());
+    dangerSound = new Media(new File(getClass().getResource("/sounds/" + dangerSoundFileName).getFile()).toURI().toString());
+    finishSound = new Media(new File(getClass().getResource("/sounds/" + finishSoundFileName).getFile()).toURI().toString());
   }
 
   public void setStage(Stage stage) {

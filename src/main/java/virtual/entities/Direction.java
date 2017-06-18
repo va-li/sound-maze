@@ -1,4 +1,4 @@
-package main.java.virtual.entities;
+package virtual.entities;
 
 /**
  * Created by Valentin on 17.06.2017.

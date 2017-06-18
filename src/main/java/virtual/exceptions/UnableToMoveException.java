@@ -1,4 +1,4 @@
-package main.java.virtual.exceptions;
+package virtual.exceptions;
 
 /**
  * Created by Valentin on 17.06.2017.

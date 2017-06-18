@@ -1,4 +1,4 @@
-package main.java.virtual.maze;
+package virtual.maze;
 
 /**
  * Created by Valentin on 17.06.2017.
